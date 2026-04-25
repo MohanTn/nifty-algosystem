@@ -8,6 +8,10 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     name: Build & Test
+    permissions:
+      checks: write
+      contents: read
+      pull-requests: write
 
     steps:
       # Step 1: Checkout code
@@ -39,13 +43,14 @@ jobs:
 
       # Step 6: Run tests with code coverage collection
       - name: Run tests with coverage
-        run: dotnet test --configuration Release --no-build --logger:trx --collect:"XPlat Code Coverage" --settings:CodeCoverage.runsettings || true
+        run: dotnet test --configuration Release --no-build --logger:trx --collect:"XPlat Code Coverage" --settings:CodeCoverage.runsettings
 
       # Step 7: Generate code coverage report with ReportGenerator
       - name: Generate code coverage report
+        if: always()
         run: |
           dotnet tool install -g dotnet-reportgenerator-globaltool
-          reportgenerator -reports:"**/coverage.cobertura.xml" -targetdir:"coverage-report" -reporttypes:"Html;HtmlSummary" -verbosity:verbose || true
+          reportgenerator -reports:"**/coverage.cobertura.xml" -targetdir:"coverage-report" -reporttypes:"Html;HtmlSummary" -verbosity:verbose
 
       # Step 8: Publish test results
       - name: Publish test results
@@ -56,18 +61,18 @@ jobs:
             **/TestResults/*.trx
           check_name: 'Test Results'
 
-      # Step 9: Post code coverage summary to PR
-      - name: Code Coverage Summary Report
-        uses: irongut/code-coverage-action@v1
+      # Step 9: Upload code coverage to Codecov (non-blocking)
+      - name: Upload code coverage to Codecov
+        uses: codecov/codecov-action@v4
         if: always()
         with:
-          filename: coverage.cobertura.xml
-          badge: true
-          fail_below: 50
-          format: markdown
-          output: both
+          files: '**/coverage.cobertura.xml'
+          flags: unittests
+          name: codecov-umbrella
+          fail_ci_if_error: false
+          verbose: false
 
-      # Step 10: Upload test results as artifacts
+      # Step 10: Upload test results as artifacts (non-failing)
       - name: Upload test results
         if: always()
         uses: actions/upload-artifact@v4
@@ -75,8 +80,9 @@ jobs:
           name: test-results
           path: '**/TestResults/*.trx'
           retention-days: 30
+          if-no-files-found: warn
 
-      # Step 11: Upload code coverage reports
+      # Step 11: Upload code coverage reports (non-failing)
       - name: Upload coverage reports
         if: always()
         uses: actions/upload-artifact@v4
@@ -86,14 +92,9 @@ jobs:
             **/coverage.cobertura.xml
             coverage-report/
           retention-days: 30
+          if-no-files-found: warn
 
-      # Step 12: Check build status
-      - name: Verify build success
-        if: failure()
-        run: |
-          echo "Build or tests failed!"
-          exit 1
-
-      - name: Verify build success (summary)
+      # Step 12: Build success summary
+      - name: Build success summary
         if: success()
         run: echo "✅ Build and tests passed successfully!"

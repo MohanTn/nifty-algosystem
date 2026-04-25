@@ -77,3 +77,13 @@ appsettings.local.json
 # OS files
 Thumbs.db
 .DS_Store
+
+**/bin/*
+**/obj/*
+**/out/*
+**/TestResults/*
+**/logs/*
+**/*.log
+**/*.tmp
+**/*.temp
+**/*.swp

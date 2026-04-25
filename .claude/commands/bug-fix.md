@@ -147,19 +147,6 @@ No file must be created for this workflow. All outputs should be returned in the
 
 ---
 
-# Step 4 — Feature Branch Creation
-
-- Create a bug-fix branch:
-  ```
-  git checkout -b fix/<feature_slug>
-  ```
-- Make an initial empty commit to establish the branch:
-  ```
-  git commit --allow-empty -m "fix/<feature_slug>: start bug fix branch"
-  ```
-
----
-
 # Step 5 — Development Cycle (BATCHED BY ROLE)
 
 **CRITICAL: Process ALL tasks through each role in a single batch before moving to the next role. Adopt each role ONCE per batch to minimize context switching.**
