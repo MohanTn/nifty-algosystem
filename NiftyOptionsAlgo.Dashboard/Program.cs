@@ -14,6 +14,9 @@ builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSignalR();
 
+// Register configuration
+builder.Services.AddSingleton<StrategyConfig>();
+
 // Register core services
 builder.Services.AddScoped<IGreeksCalculator, BlackScholesGreeksCalculator>();
 builder.Services.AddScoped<IStrategyEngine, StrategyEngine>();
