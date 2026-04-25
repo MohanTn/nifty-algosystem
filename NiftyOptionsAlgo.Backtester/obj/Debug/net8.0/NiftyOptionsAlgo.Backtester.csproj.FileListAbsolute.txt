@@ -9,3 +9,7 @@
 /home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.Backtester/obj/Debug/net8.0/refint/NiftyOptionsAlgo.Backtester.dll
 /home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.Backtester/obj/Debug/net8.0/NiftyOptionsAlgo.Backtester.pdb
 /home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.Backtester/obj/Debug/net8.0/ref/NiftyOptionsAlgo.Backtester.dll
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.Backtester/obj/Debug/net8.0/NiftyOptionsAlgo.Backtester.csproj.AssemblyReference.cache
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.Backtester/bin/Debug/net8.0/NiftyOptionsAlgo.Core.dll
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.Backtester/bin/Debug/net8.0/NiftyOptionsAlgo.Core.pdb
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.Backtester/obj/Debug/net8.0/NiftyOpt.DC1F3CAE.Up2Date
