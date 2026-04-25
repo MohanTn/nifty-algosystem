@@ -35,6 +35,9 @@
         }
       },
       "NiftyOptionsAlgo.Core/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.1"
+        },
         "runtime": {
           "NiftyOptionsAlgo.Core.dll": {
             "assemblyVersion": "1.0.0",
