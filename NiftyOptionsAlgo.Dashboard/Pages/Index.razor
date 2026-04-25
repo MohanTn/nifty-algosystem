@@ -1,9 +1,37 @@
 ﻿@page "/"
 
-<PageTitle>Index</PageTitle>
+<PageTitle>NIFTY Options Trading Dashboard</PageTitle>
 
-<h1>Hello, world!</h1>
+<h1>NIFTY Options Algorithmic Trading System</h1>
 
-Welcome to your new app.
+<div class="alert alert-info">
+    <strong>Welcome to the Trading Dashboard</strong>
+    <p>Real-time monitoring of algorithmic strangle strategies with VIX-regime-based entry/exit logic.</p>
+</div>
 
-<SurveyPrompt Title="How is Blazor working for you?" />
+<div class="row mt-4">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>System Status</h5>
+            </div>
+            <div class="card-body">
+                <p><strong>Status:</strong> <span class="badge bg-success">Ready</span></p>
+                <p><strong>Mode:</strong> Paper Trading (Live Trading Disabled)</p>
+                <p><strong>Last Update:</strong> @DateTime.Now.ToString("HH:mm:ss")</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h5>Quick Actions</h5>
+            </div>
+            <div class="card-body">
+                <a href="live-positions" class="btn btn-primary btn-sm">View Live Positions</a>
+                <a href="risk-metrics" class="btn btn-warning btn-sm">Risk Metrics</a>
+                <a href="backtester" class="btn btn-info btn-sm">Backtest</a>
+            </div>
+        </div>
+    </div>
+</div>
