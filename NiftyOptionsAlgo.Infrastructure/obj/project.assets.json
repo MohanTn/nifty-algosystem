@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {}
+    "net8.0": {
+      "NiftyOptionsAlgo.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "compile": {
+          "bin/placeholder/NiftyOptionsAlgo.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/NiftyOptionsAlgo.Core.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "NiftyOptionsAlgo.Core/1.0.0": {
+      "type": "project",
+      "path": "../NiftyOptionsAlgo.Core/NiftyOptionsAlgo.Core.csproj",
+      "msbuildProject": "../NiftyOptionsAlgo.Core/NiftyOptionsAlgo.Core.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net8.0": []
+    "net8.0": [
+      "NiftyOptionsAlgo.Core >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/home/mohantn/.nuget/packages/": {}
@@ -31,7 +50,11 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.Core/NiftyOptionsAlgo.Core.csproj": {
+              "projectPath": "/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.Core/NiftyOptionsAlgo.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

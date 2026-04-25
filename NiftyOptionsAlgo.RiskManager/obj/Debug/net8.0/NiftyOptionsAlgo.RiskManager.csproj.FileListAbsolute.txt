@@ -9,3 +9,7 @@
 /home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.RiskManager/obj/Debug/net8.0/refint/NiftyOptionsAlgo.RiskManager.dll
 /home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.RiskManager/obj/Debug/net8.0/NiftyOptionsAlgo.RiskManager.pdb
 /home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.RiskManager/obj/Debug/net8.0/ref/NiftyOptionsAlgo.RiskManager.dll
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.RiskManager/bin/Debug/net8.0/NiftyOptionsAlgo.Core.dll
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.RiskManager/bin/Debug/net8.0/NiftyOptionsAlgo.Core.pdb
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.RiskManager/obj/Debug/net8.0/NiftyOptionsAlgo.RiskManager.csproj.AssemblyReference.cache
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.RiskManager/obj/Debug/net8.0/NiftyOpt.1316AA96.Up2Date

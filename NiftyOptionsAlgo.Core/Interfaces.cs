@@ -48,6 +48,7 @@ public interface IKiteService
     Task<int> PlaceOrderAsync(OrderRequest request);
     Task<bool> CancelOrderAsync(int orderId);
     Task<List<Position>> GetPositionsAsync();
+    Task<Margins> GetMarginsAsync();
 }
 
 public interface ITickerService
@@ -72,3 +73,4 @@ public class TickData { public string Symbol { get; set; } = string.Empty; publi
 public class PositionStatus { public Guid TradeId { get; set; } public string Status { get; set; } = string.Empty; }
 public class OrderResult { public bool Success { get; set; } public string Message { get; set; } = string.Empty; }
 public class RiskAssessment { public bool IsWithinLimits { get; set; } public decimal CurrentDrawdown { get; set; } }
+public class Margins { public decimal Available { get; set; } }
