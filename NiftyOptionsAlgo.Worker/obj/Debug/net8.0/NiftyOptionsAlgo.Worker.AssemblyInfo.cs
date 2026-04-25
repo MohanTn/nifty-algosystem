@@ -10,11 +10,10 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("dotnet-NiftyOptionsAlgo.Worker-60bbb580-7d23-4e00-bcde-05fada64371f")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("NiftyOptionsAlgo.Worker")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b5350654c79bb47280ea7b3f271a12718e98db9a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+985052ea8966bba623ecd872e7fe2005a491f821")]
 [assembly: System.Reflection.AssemblyProductAttribute("NiftyOptionsAlgo.Worker")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NiftyOptionsAlgo.Worker")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

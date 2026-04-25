@@ -1,0 +1,99 @@
+name: CI - Build & Test
+
+on:
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    name: Build & Test
+
+    steps:
+      # Step 1: Checkout code
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Step 2: Setup .NET 8.0
+      - name: Setup .NET 8.0
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      # Step 3: Cache NuGet packages for faster builds
+      - name: Cache NuGet packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.nuget/packages
+          key: ${{ runner.os }}-nuget-${{ hashFiles('**/global.json', '**/*.csproj') }}
+          restore-keys: |
+            ${{ runner.os }}-nuget-
+
+      # Step 4: Restore NuGet packages
+      - name: Restore NuGet packages
+        run: dotnet restore
+
+      # Step 5: Build solution in Release configuration
+      - name: Build solution (Release)
+        run: dotnet build --configuration Release --no-restore
+
+      # Step 6: Run tests with code coverage collection
+      - name: Run tests with coverage
+        run: dotnet test --configuration Release --no-build --logger:trx --collect:"XPlat Code Coverage" --settings:CodeCoverage.runsettings || true
+
+      # Step 7: Generate code coverage report with ReportGenerator
+      - name: Generate code coverage report
+        run: |
+          dotnet tool install -g dotnet-reportgenerator-globaltool
+          reportgenerator -reports:"**/coverage.cobertura.xml" -targetdir:"coverage-report" -reporttypes:"Html;HtmlSummary" -verbosity:verbose || true
+
+      # Step 8: Publish test results
+      - name: Publish test results
+        uses: EnricoMi/publish-unit-test-result-action@v2
+        if: always()
+        with:
+          files: |
+            **/TestResults/*.trx
+          check_name: 'Test Results'
+
+      # Step 9: Post code coverage summary to PR
+      - name: Code Coverage Summary Report
+        uses: irongut/code-coverage-action@v1
+        if: always()
+        with:
+          filename: coverage.cobertura.xml
+          badge: true
+          fail_below: 50
+          format: markdown
+          output: both
+
+      # Step 10: Upload test results as artifacts
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: '**/TestResults/*.trx'
+          retention-days: 30
+
+      # Step 11: Upload code coverage reports
+      - name: Upload coverage reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-reports
+          path: |
+            **/coverage.cobertura.xml
+            coverage-report/
+          retention-days: 30
+
+      # Step 12: Check build status
+      - name: Verify build success
+        if: failure()
+        run: |
+          echo "Build or tests failed!"
+          exit 1
+
+      - name: Verify build success (summary)
+        if: success()
+        run: echo "✅ Build and tests passed successfully!"

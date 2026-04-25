@@ -20,4 +20,8 @@
     <Using Include="Xunit" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\NiftyOptionsAlgo.Core\NiftyOptionsAlgo.Core.csproj" />
+  </ItemGroup>
+
 </Project>
