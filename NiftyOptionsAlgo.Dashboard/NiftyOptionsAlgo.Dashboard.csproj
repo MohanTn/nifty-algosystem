@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Components.QuickGrid" Version="8.0.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NiftyOptionsAlgo.Core\NiftyOptionsAlgo.Core.csproj" />
+    <ProjectReference Include="..\NiftyOptionsAlgo.Engine\NiftyOptionsAlgo.Engine.csproj" />
+    <ProjectReference Include="..\NiftyOptionsAlgo.Infrastructure\NiftyOptionsAlgo.Infrastructure.csproj" />
+    <ProjectReference Include="..\NiftyOptionsAlgo.RiskManager\NiftyOptionsAlgo.RiskManager.csproj" />
+    <ProjectReference Include="..\NiftyOptionsAlgo.Backtester\NiftyOptionsAlgo.Backtester.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NiftyOptionsAlgo.Core")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+94986017ec862a014faf0c372e09739b8325c106")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+00c7074515dd6b300c101b185ff003f33029e655")]
 [assembly: System.Reflection.AssemblyProductAttribute("NiftyOptionsAlgo.Core")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NiftyOptionsAlgo.Core")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
