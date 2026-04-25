@@ -1,0 +1,11 @@
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.Engine/bin/Debug/net8.0/NiftyOptionsAlgo.Engine.deps.json
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.Engine/bin/Debug/net8.0/NiftyOptionsAlgo.Engine.dll
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.Engine/bin/Debug/net8.0/NiftyOptionsAlgo.Engine.pdb
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.Engine/obj/Debug/net8.0/NiftyOptionsAlgo.Engine.GeneratedMSBuildEditorConfig.editorconfig
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.Engine/obj/Debug/net8.0/NiftyOptionsAlgo.Engine.AssemblyInfoInputs.cache
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.Engine/obj/Debug/net8.0/NiftyOptionsAlgo.Engine.AssemblyInfo.cs
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.Engine/obj/Debug/net8.0/NiftyOptionsAlgo.Engine.csproj.CoreCompileInputs.cache
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.Engine/obj/Debug/net8.0/NiftyOptionsAlgo.Engine.dll
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.Engine/obj/Debug/net8.0/refint/NiftyOptionsAlgo.Engine.dll
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.Engine/obj/Debug/net8.0/NiftyOptionsAlgo.Engine.pdb
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.Engine/obj/Debug/net8.0/ref/NiftyOptionsAlgo.Engine.dll

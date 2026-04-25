@@ -1,0 +1,11 @@
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.RiskManager/bin/Debug/net8.0/NiftyOptionsAlgo.RiskManager.deps.json
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.RiskManager/bin/Debug/net8.0/NiftyOptionsAlgo.RiskManager.dll
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.RiskManager/bin/Debug/net8.0/NiftyOptionsAlgo.RiskManager.pdb
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.RiskManager/obj/Debug/net8.0/NiftyOptionsAlgo.RiskManager.GeneratedMSBuildEditorConfig.editorconfig
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.RiskManager/obj/Debug/net8.0/NiftyOptionsAlgo.RiskManager.AssemblyInfoInputs.cache
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.RiskManager/obj/Debug/net8.0/NiftyOptionsAlgo.RiskManager.AssemblyInfo.cs
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.RiskManager/obj/Debug/net8.0/NiftyOptionsAlgo.RiskManager.csproj.CoreCompileInputs.cache
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.RiskManager/obj/Debug/net8.0/NiftyOptionsAlgo.RiskManager.dll
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.RiskManager/obj/Debug/net8.0/refint/NiftyOptionsAlgo.RiskManager.dll
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.RiskManager/obj/Debug/net8.0/NiftyOptionsAlgo.RiskManager.pdb
+/home/mohantn/REPO/nifty-algosystem/NiftyOptionsAlgo.RiskManager/obj/Debug/net8.0/ref/NiftyOptionsAlgo.RiskManager.dll
