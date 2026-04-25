@@ -56,16 +56,16 @@ jobs:
             **/TestResults/*.trx
           check_name: 'Test Results'
 
-      # Step 9: Post code coverage summary to PR
-      - name: Code Coverage Summary Report
-        uses: irongut/code-coverage-action@v1
+      # Step 9: Upload code coverage to Codecov
+      - name: Upload code coverage to Codecov
+        uses: codecov/codecov-action@v4
         if: always()
         with:
-          filename: coverage.cobertura.xml
-          badge: true
-          fail_below: 50
-          format: markdown
-          output: both
+          files: '**/coverage.cobertura.xml'
+          flags: unittests
+          name: codecov-umbrella
+          fail_ci_if_error: false
+          verbose: true
 
       # Step 10: Upload test results as artifacts
       - name: Upload test results
